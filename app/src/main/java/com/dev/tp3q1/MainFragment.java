@@ -18,12 +18,13 @@ public class MainFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        textView = rootView.findViewById(R.id.textview);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_main, container, true);
+        rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        textView = rootView.findViewById(R.id.textview);
         return rootView;
     }
 }
